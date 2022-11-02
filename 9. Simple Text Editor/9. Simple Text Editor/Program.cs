@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +11,7 @@ namespace _9._Simple_Text_Editor
         static void Main(string[] args)
         {
             string string1 = "";
-            string newString = "";
+            
             Stack<string> stack = new Stack<string>();
             stack.Push(string1);
             int n = int.Parse(Console.ReadLine());
@@ -30,11 +29,12 @@ namespace _9._Simple_Text_Editor
                 if (command[0] == "2")
                 {
                     stack.Push(string1);
-                    for (int j = 0; j < string1.Split(" ").Length - Convert.ToInt32(command[1]); j++)
+                    string newString = "";
+                    for (int j = 0; j < string1.Length - Convert.ToInt32(command[1]); j++)
                     {
-                        newString += string1.Split("")[j];
+                        newString += string1[j];
                     }
-                    string1 += newString;
+                    string1 = newString;
                 }
                 if (command[0] == "3")
                 {
