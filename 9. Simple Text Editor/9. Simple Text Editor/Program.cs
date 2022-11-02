@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -13,11 +14,12 @@ namespace _9._Simple_Text_Editor
             string string1 = "";
             string newString = "";
             Stack<string> stack = new Stack<string>();
+            stack.Push(string1);
             int n = int.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++)
             {
                 string[] command = Console.ReadLine().Split(" ");
-                if (command.Contains("1"))
+                if (command[0] == "1")
                 {
                     stack.Push(string1);
                     for (int x = 1; x < command.Length; x++)
@@ -25,16 +27,16 @@ namespace _9._Simple_Text_Editor
                         string1 += (command[x]);
                     }
                 }
-                if (command.Contains("2"))
+                if (command[0] == "2")
                 {
                     stack.Push(string1);
                     for (int j = 0; j < string1.Split(" ").Length - Convert.ToInt32(command[1]); j++)
                     {
-                        newString += string1.Split(" ")[j];
+                        newString += string1.Split("")[j];
                     }
                     string1 += newString;
                 }
-                if (command.Contains("3"))
+                if (command[0] == "3")
                 {
                     int count = 0;
                     int x = int.Parse(command[1]);
@@ -48,7 +50,8 @@ namespace _9._Simple_Text_Editor
                         }
                     }
                 }
-                if (command.Contains("4"))
+
+                if (command[0] == "4")
                 {
                     string1 = stack.Pop();
                 }
