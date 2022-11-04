@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
+using System.Threading;
 
 namespace _10._Crossroads
 {
@@ -9,13 +11,12 @@ namespace _10._Crossroads
     {
         static void Main(string[] args)
         {
-            bool green = true;
-            int count = 0;
-
-            Queue<string> cars = new Queue<string>();
-            int seconds = int.Parse(Console.ReadLine());
+            int greenLight = int.Parse(Console.ReadLine());
+            int newgreenLight = greenLight;
             int freeWindow = int.Parse(Console.ReadLine());
-            int currentPos = 0;
+            int count = 0;
+            bool greenLightOn = true;
+            Queue<string> cars = new Queue<string>();
             while (true)
             {
                 string command = Console.ReadLine();
@@ -23,47 +24,96 @@ namespace _10._Crossroads
                 {
                     break;
                 }
-                if (command != "END" && command != "green")
+                if (command == "green")
                 {
-                    cars.Enqueue(command);
-                    if (green == true)
+                    if (greenLightOn == false)
                     {
-                        while (cars.Count > 0)
+                        greenLight = newgreenLight;
+                        while (greenLight > 0)
                         {
-                            string car = cars.Peek();
-                            Queue<char> car1 = new Queue<char>();
-                            
-                            foreach (char item in car)
+                            Queue<char> chars = new Queue<char>();
+                            string car = cars.Dequeue();
+                            foreach (var item in car)
                             {
-                                car1.Enqueue(item);
+                                chars.Enqueue(item);
                             }
-                            for (int i = currentPos; i < seconds + freeWindow; i++)
+                            for (int i = 0; i < greenLight; i++)
                             {
-                                car1.Dequeue();
-                                if (car1.Count == 0)
+                                chars.Dequeue();
+                                if (chars.Count == 0)
                                 {
                                     count++;
-                                    currentPos = i+1;
+                                    greenLight = greenLight - car.Length;
                                     break;
                                 }
                             }
-                            if (car1.Count > 0)
+                            if (chars.Count > 0)
+                            {
+                                for (int i = 0; i < freeWindow; i++)
+                                {
+                                    chars.Dequeue();
+                                    if (chars.Count == 0)
+                                    {
+                                        count++;
+                                        greenLight = 0;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (chars.Count > 0)
                             {
                                 Console.WriteLine("A crash happened!");
-                                Console.WriteLine($"{car} was hit at {car1.Peek()}.");
+                                Console.WriteLine($"{car} was hit at {chars.Peek()}.");
                                 Environment.Exit(0);
                             }
-                            cars.Dequeue();
                         }
-                        if (command == "green")
+                    }
+                    else if (greenLightOn == true)
+                    {
+                        greenLightOn = false;
+                    }
+                }
+                if (command != "green" && command != "END")
+                {
+                    cars.Enqueue(command);
+                    if (greenLightOn)
+                    {
+                        while (greenLight > 0 && cars.Count > 0)
                         {
-                            if (green == true)
+                            Queue<char> chars = new Queue<char>();
+                            string car = cars.Dequeue();
+                            foreach (var item in car)
                             {
-                                green = false;
+                                chars.Enqueue(item);
                             }
-                            else if (green == false)
+                            for (int i = 0; i < greenLight; i++)
                             {
-                                green = true;
+                                chars.Dequeue();
+                                if (chars.Count == 0)
+                                {
+                                    count++;
+                                    greenLight = greenLight - car.Length;
+                                    break;
+                                }
+                            }
+                            if (chars.Count > 0)
+                            {
+                                for (int i = 0; i < freeWindow; i++)
+                                {
+                                    chars.Dequeue();
+                                    if (chars.Count == 0)
+                                    {
+                                        count++;
+                                        greenLight = 0;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (chars.Count > 0)
+                            {
+                                Console.WriteLine("A crash happened!");
+                                Console.WriteLine($"{car} was hit at {chars.Peek()}.");
+                                Environment.Exit(0);
                             }
                         }
                     }
