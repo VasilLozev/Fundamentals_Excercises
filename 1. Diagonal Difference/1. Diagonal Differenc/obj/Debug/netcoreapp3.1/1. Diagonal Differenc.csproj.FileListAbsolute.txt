@@ -1,0 +1,14 @@
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\bin\Debug\netcoreapp3.1\1. Diagonal Differenc.exe
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\bin\Debug\netcoreapp3.1\1. Diagonal Differenc.deps.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\bin\Debug\netcoreapp3.1\1. Diagonal Differenc.runtimeconfig.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\bin\Debug\netcoreapp3.1\1. Diagonal Differenc.runtimeconfig.dev.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\bin\Debug\netcoreapp3.1\1. Diagonal Differenc.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\bin\Debug\netcoreapp3.1\1. Diagonal Differenc.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\obj\Debug\netcoreapp3.1\1. Diagonal Differenc.csproj.AssemblyReference.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\obj\Debug\netcoreapp3.1\1. Diagonal Differenc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\obj\Debug\netcoreapp3.1\1. Diagonal Differenc.AssemblyInfoInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\obj\Debug\netcoreapp3.1\1. Diagonal Differenc.AssemblyInfo.cs
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\obj\Debug\netcoreapp3.1\1. Diagonal Differenc.csproj.CoreCompileInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\obj\Debug\netcoreapp3.1\1. Diagonal Differenc.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\obj\Debug\netcoreapp3.1\1. Diagonal Differenc.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\1. Diagonal Differenc\1. Diagonal Differenc\obj\Debug\netcoreapp3.1\1. Diagonal Differenc.genruntimeconfig.cache
