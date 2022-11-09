@@ -44,17 +44,9 @@ namespace _3._Maximal_Sum
                             for (int x = j-2; x <= j; x++)
                             {
                                 Console.Write(matrix[z, x] + " ");
-
                             }
                             Console.WriteLine();
                         }
-                        break;
-                    }
-
-                    if (matrix[i - 2, j - 2] + matrix[i - 2, j - 1] + matrix[i - 2, j]
-                            + matrix[i - 1, j - 2] + matrix[i - 1, j - 1] + matrix[i - 1, j]
-                            + matrix[i, j - 2] + matrix[i, j - 1] + matrix[i, j] == MaxSum)
-                    {
                         Environment.Exit(0);
                     }
                 }
