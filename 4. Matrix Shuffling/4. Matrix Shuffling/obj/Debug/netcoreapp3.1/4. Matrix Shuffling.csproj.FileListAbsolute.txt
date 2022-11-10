@@ -1,0 +1,14 @@
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\bin\Debug\netcoreapp3.1\4. Matrix Shuffling.exe
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\bin\Debug\netcoreapp3.1\4. Matrix Shuffling.deps.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\bin\Debug\netcoreapp3.1\4. Matrix Shuffling.runtimeconfig.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\bin\Debug\netcoreapp3.1\4. Matrix Shuffling.runtimeconfig.dev.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\bin\Debug\netcoreapp3.1\4. Matrix Shuffling.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\bin\Debug\netcoreapp3.1\4. Matrix Shuffling.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\obj\Debug\netcoreapp3.1\4. Matrix Shuffling.csproj.AssemblyReference.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\obj\Debug\netcoreapp3.1\4. Matrix Shuffling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\obj\Debug\netcoreapp3.1\4. Matrix Shuffling.AssemblyInfoInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\obj\Debug\netcoreapp3.1\4. Matrix Shuffling.AssemblyInfo.cs
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\obj\Debug\netcoreapp3.1\4. Matrix Shuffling.csproj.CoreCompileInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\obj\Debug\netcoreapp3.1\4. Matrix Shuffling.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\obj\Debug\netcoreapp3.1\4. Matrix Shuffling.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\4. Matrix Shuffling\4. Matrix Shuffling\obj\Debug\netcoreapp3.1\4. Matrix Shuffling.genruntimeconfig.cache
