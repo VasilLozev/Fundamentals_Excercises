@@ -1,0 +1,28 @@
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.exe
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.deps.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.runtimeconfig.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.runtimeconfig.dev.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.csproj.AssemblyReference.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.AssemblyInfoInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.AssemblyInfo.cs
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.csproj.CoreCompileInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.genruntimeconfig.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.csproj.AssemblyReference.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.AssemblyInfoInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.AssemblyInfo.cs
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.csproj.CoreCompileInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.exe
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.deps.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.runtimeconfig.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.runtimeconfig.dev.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\bin\Debug\netcoreapp3.1\7. Truck Tour.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\Stack & Queue Excercises\7. Truck Tour\7. Truck Tour\obj\Debug\netcoreapp3.1\7. Truck Tour.genruntimeconfig.cache
