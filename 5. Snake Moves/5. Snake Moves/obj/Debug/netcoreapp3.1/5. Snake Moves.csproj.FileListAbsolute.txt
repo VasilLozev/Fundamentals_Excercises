@@ -1,0 +1,14 @@
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\bin\Debug\netcoreapp3.1\5. Snake Moves.exe
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\bin\Debug\netcoreapp3.1\5. Snake Moves.deps.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\bin\Debug\netcoreapp3.1\5. Snake Moves.runtimeconfig.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\bin\Debug\netcoreapp3.1\5. Snake Moves.runtimeconfig.dev.json
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\bin\Debug\netcoreapp3.1\5. Snake Moves.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\bin\Debug\netcoreapp3.1\5. Snake Moves.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\obj\Debug\netcoreapp3.1\5. Snake Moves.csproj.AssemblyReference.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\obj\Debug\netcoreapp3.1\5. Snake Moves.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\obj\Debug\netcoreapp3.1\5. Snake Moves.AssemblyInfoInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\obj\Debug\netcoreapp3.1\5. Snake Moves.AssemblyInfo.cs
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\obj\Debug\netcoreapp3.1\5. Snake Moves.csproj.CoreCompileInputs.cache
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\obj\Debug\netcoreapp3.1\5. Snake Moves.dll
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\obj\Debug\netcoreapp3.1\5. Snake Moves.pdb
+C:\Users\Vasil\OneDrive\Desktop\Fundamentals_Excercises\5. Snake Moves\5. Snake Moves\obj\Debug\netcoreapp3.1\5. Snake Moves.genruntimeconfig.cache
