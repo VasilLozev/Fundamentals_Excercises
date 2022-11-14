@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace _5._Snake_Moves
 {
@@ -9,40 +10,56 @@ namespace _5._Snake_Moves
     {
         static void Main(string[] args)
         {
-            string[] input = Console.ReadLine().Split(" ");
-            char[,] output = new char[int.Parse(input[0]), int.Parse(input[1])];
-            string name = Console.ReadLine();
-            Stack<char> stack = new Stack<char>(name);
-            Queue<char> queue = new Queue<char>(name);
-            for (int i = 0; i < int.Parse(input[0]); i++)
+            int[] dimensions = Console.ReadLine()
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Select(n => int.Parse(n))
+                .ToArray();
+
+            string word = Console.ReadLine();
+
+            char[,] matrix = new char[dimensions[0], dimensions[1]];
+
+            int currentWordIndex = 0;
+
+            for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                if (i % 2 == 0)
+                if (row % 2 == 0)
                 {
-                    for (int j = 0; j < int.Parse(input[1]); j++)
+                    for (int col = 0; col < matrix.GetLength(1); col++)
                     {
-                        output[i, j] = queue.Dequeue();
-                        if (queue.Count == 0)
+                        if (currentWordIndex == word.Length)
                         {
-                            queue = new Queue<char>(name);
+                            currentWordIndex = 0;
                         }
+
+                        matrix[row, col] = word[currentWordIndex];
+
+                        currentWordIndex++;
                     }
                 }
-                if (i % 2 != 0)
+                else
                 {
-                    for (int j = int.Parse(input[1]) - 1; j >= 0; j--)
+                    for (int col = matrix.GetLength(1) - 1; col >= 0; col--)
                     {
-                        if (queue.Count == 0)
+                        if (currentWordIndex == word.Length)
                         {
-                            queue = new Queue<char>(name);
+                            currentWordIndex = 0;
                         }
-                        output[i, j] = queue.Dequeue();
+                        matrix[row, col] = word[currentWordIndex];
+
+                        currentWordIndex++;
                     }
                 }
-                for (int j = 0; j < int.Parse(input[1]); j++)
+            }
+
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
                 {
-                    Console.Write(output[i, j]);
+                    Console.Write($"{matrix[row, col]}");
                 }
                 Console.WriteLine();
+                currentWordIndex++;
             }
         }
     }
