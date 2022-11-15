@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
@@ -12,18 +13,14 @@ namespace _8.Bombs
         {
             int size = int.Parse(Console.ReadLine());
 
-            int[,] matrix = new int[size, size];
+            int[][] matrix = new int[size][];
 
             for (int row = 0; row < size; row++)
             {
-                int[] numbers = Console.ReadLine()
+                matrix[row] = Console.ReadLine()
                         .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                         .Select(n => int.Parse(n))
                         .ToArray();
-                for (int col = 0; col < size; col++)
-                {
-                    matrix[row, col] = numbers[col];
-                }
             }
 
             int sum = 0;
@@ -47,7 +44,7 @@ namespace _8.Bombs
                     if (CanExplode(row, col, matrix))
                     {
                         aliveCells++;
-                        sum += matrix[row, col];
+                        sum += matrix[row][col];
                     }
                 }
             }
@@ -57,64 +54,82 @@ namespace _8.Bombs
             {
                 for (int col = 0; col < size; col++)
                 {
-                    Console.Write(matrix[row, col] + " ");
+                    Console.Write(matrix[row][col] + " ");
                 }
                 Console.WriteLine();
             }
         }
 
-        static int BombExplode(int row, int col, int size, int[,] matrix)
+        static int BombExplode(int row, int col, int size, int[][] matrix)
         {
-            int value = matrix[row, col];
+            int value = matrix[row][col];
             if (CanExplode(row, col, matrix))
             {
-                matrix[row, col] = 0;
+                matrix[row][col] = 0;
                 //vertical down-right
                 if (CheckIndexValues(row + 1, col + 1, size))
                 {
-                    matrix[row + 1, col + 1] -= value;
-
+                    if (CanExplode(row + 1, col + 1, matrix))
+                    {
+                        matrix[row + 1][col + 1] -= value;
+                    }
                 }
                 //vertical down
                 if (CheckIndexValues(row + 1, col, size))
                 {
-                    matrix[row + 1, col] -= value;
-
+                    if (CanExplode(row + 1, col, matrix))
+                    {
+                        matrix[row + 1][col] -= value;
+                    }
                 }
                 //vertical down-left
                 if (CheckIndexValues(row + 1, col - 1, size))
                 {
-                    matrix[row + 1, col - 1] -= value;
+                    if (CanExplode(row + 1, col - 1, matrix))
+                    {
+                        matrix[row + 1][col - 1] -= value;
+                    }
 
                 }
                 //vertical up-right
                 if (CheckIndexValues(row - 1, col + 1, size))
                 {
-                    matrix[row - 1, col + 1] -= value;
-
+                    if (CanExplode(row - 1, col + 1, matrix))
+                    {
+                        matrix[row - 1][col + 1] -= value;
+                    }
                 }
                 //vertical up
                 if (CheckIndexValues(row - 1, col, size))
                 {
-                    matrix[row - 1, col] -= value;
-
+                    if (CanExplode(row - 1, col, matrix))
+                    {
+                        matrix[row - 1][col] -= value;
+                    }
                 }
                 //vertical up-left
                 if (CheckIndexValues(row - 1, col - 1, size))
                 {
-                    matrix[row - 1, col - 1] -= value;
-
+                    if (CanExplode(row - 1, col - 1, matrix))
+                    {
+                        matrix[row - 1][col -1] -= value;
+                    }
                 }
                 //horizont right
                 if (CheckIndexValues(row, col + 1, size))
                 {
-                    matrix[row, col + 1] -= value;
-
+                    if (CanExplode(row, col + 1, matrix))
+                    {
+                        matrix[row][col + 1] -= value;
+                    }
                 }
                 //horizont left
                 if (CheckIndexValues(row, col - 1, size))
                 {
-                    matrix[row, col - 1] -= value;
+                    if (CanExplode(row, col - 1, matrix))
+                    {
+                        matrix[row][col - 1] -= value;
+                    }
                 }
             }
             return value;
@@ -124,9 +139,9 @@ namespace _8.Bombs
         {
             return row >= 0 && col >= 0 && row < size && col < size;
         }
-        static bool CanExplode(int row, int col, int[,] matrix)
+        static bool CanExplode(int row, int col, int[][] matrix)
         {
-            return matrix[row, col] > 0;
+            return matrix[row][col] > 0;
         }
     }
 }
