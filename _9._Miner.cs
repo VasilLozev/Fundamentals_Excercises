@@ -231,7 +231,7 @@ namespace _9._Miner
 
             static bool fieldIsAvailable(int row, int col, int size)
         {
-            return row > 0 && col > 0 && row < size && col < size; 
+            return row >= 0 && col >= 0 && row < size && col < size; 
         }
         static int FindStartRow(int size, string[,] matrix)
         {
