@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Numerics;
 
@@ -15,8 +16,6 @@ namespace _9._Miner
 
             string[,] matrix = new string[size, size];
 
-            int[] endPositions = new int[2];
-
             for (int row = 0; row < size; row++)
             {
                 string[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -25,15 +24,21 @@ namespace _9._Miner
                     matrix[row, col] = input[col];
                 }
             }
-            int startRow = FindStartRow(size, matrix);
-            int startCol = FindStartCol(size, matrix);
+            int[] tmp = FindStart(size, matrix);
+            int startRow = tmp[0], startCol = tmp[1];
             for (int i = 0; i < commands.Length; i++)
             {
-               endPositions = CommandMove(startRow, startCol, size, commands[i], matrix);
+               int [] endPositions = CommandMove(startRow, startCol, size, commands[i], matrix);
                startRow = endPositions[0];
                startCol = endPositions[1];
+                if (!HasCoal(matrix, size))
+                {
+                    Console.WriteLine($"You collected all coals! ({startRow}, {startCol})");
+                    return;
+                }
             }
             int remainingCoals = 0;
+            
             for (int row = 0; row < size; row++)
             {
                 for (int col = 0; col < size; col++)
@@ -49,77 +54,38 @@ namespace _9._Miner
 
         private static int[] CommandMove(int row, int col, int size, string command, string[,] matrix)
         {
-            int coal = 0;
             
             switch (command)
             {
                 case "left":
-                    if (fieldIsAvailable(row, col - 1, size))
-                    {
-                        switch (matrix[row, col - 1])
-                        {
-                            case "c":
-                                coal++;
-                                matrix[row, col - 1] = "*";
-                                int coalCount = 0;
-                                for (int i = 0; i < size; i++)
-                                {
-                                    for (int j = 0; j < size; j++)
-                                    {
-                                        if (matrix[i,j] == "c")
-                                        {
-                                            coalCount++;
-                                        }
-                                    }
-                                }
-                                if (coalCount == 0)
-                                {
-                                    Console.WriteLine($"You collected all coals! ({row}, {col - 1})");
-                                    Environment.Exit(0);
-                                    break;  
-                                }
-                                break;
-                            case "s":
-                                break;
-                            case "*":
-                                break;
-                            case "e":
-                                Console.WriteLine($"Game over! ({row}, {col - 1})");
-                                Environment.Exit(0);
-                                break;
-                        }
-                        col--;
-                    }
-                    else
+                    if (!fieldIsAvailable(row, col - 1, size))
                     {
                         break;
                     }
-                    break;
+                    
+                    switch (matrix[row, col - 1])
+                    {
+                    case "c":
+                        matrix[row, col - 1] = "*";                       
+                        break;
+                    case "s":
+                        break;
+                    case "*":
+                        break;
+                    case "e":
+                        Console.WriteLine($"Game over! ({row}, {col - 1})");
+                        Environment.Exit(0);
+                        break;
+                    }
+                col--;
+                break;
                 case "right":
                     if (fieldIsAvailable(row, col + 1, size))
                     {
                         switch (matrix[row, col + 1])
                         {
                             case "c":
-                                coal++;
                                 matrix[row, col + 1] = "*";
-                                int coalCount = 0;
-                                for (int i = 0; i < size; i++)
-                                {
-                                    for (int j = 0; j < size; j++)
-                                    {
-                                        if (matrix[i, j] == "c")
-                                        {
-                                            coalCount++;
-                                        }
-                                    }
-                                }
-                                if (coalCount == 0)
-                                {
-                                    Console.WriteLine($"You collected all coals! ({row}, {col + 1})");
-                                    Environment.Exit(0);
-                                    break;
-                                }
                                 break;
                             case "s":
                                 break;
@@ -138,132 +104,83 @@ namespace _9._Miner
                     }
                     break;
                 case "up":
-                    if (fieldIsAvailable(row - 1, col, size))
-                    {
-                        switch (matrix[row - 1, col])
-                        {
-                            case "c":
-                                coal++;
-                                matrix[row - 1, col] = "*";
-                                int coalCount = 0;
-                                for (int i = 0; i < size; i++)
-                                {
-                                    for (int j = 0; j < size; j++)
-                                    {
-                                        if (matrix[i, j] == "c")
-                                        {
-                                            coalCount++;
-                                        }
-                                    }
-                                }
-                                if (coalCount == 0)
-                                {
-                                    Console.WriteLine($"You collected all coals! ({row - 1}, {col})");
-                                    Environment.Exit(0);
-                                    break;
-                                }
-                                break;
-                            case "s":
-                                break;
-                            case "*":
-                                break;
-                            case "e":
-                                Console.WriteLine($"Game over! ({row - 1}, {col})");
-                                Environment.Exit(0);
-                                break;
-                        }
-                        row--;
-                    }
-                    else
+                    if (!fieldIsAvailable(row - 1, col, size))
                     {
                         break;
                     }
+                    switch (matrix[row - 1, col])
+                    {
+                        case "c":
+                            matrix[row - 1, col] = "*";
+                            break;
+                        case "s":
+                            break;
+                        case "*":
+                            break;
+                        case "e":
+                            Console.WriteLine($"Game over! ({row - 1}, {col})");
+                            Environment.Exit(0);
+                            break;
+                    }
+                    row--;
                     break;
+
                 case "down":
-                    if (fieldIsAvailable(row + 1, col, size))
-                    {
-                        switch (matrix[row + 1, col])
-                        {
-                            case "c":
-                                coal++;
-                                matrix[row + 1, col] = "*";
-                                int coalCount = 0;
-                                for (int i = 0; i < size; i++)
-                                {
-                                    for (int j = 0; j < size; j++)
-                                    {
-                                        if (matrix[i, j] == "c")
-                                        {
-                                            coalCount++;
-                                        }
-                                    }
-                                }
-                                if (coalCount == 0)
-                                {
-                                    Console.WriteLine($"You collected all coals! ({row + 1}, {col})");
-                                    Environment.Exit(0);
-                                    break;
-                                }
-                                break;
-                            case "s":
-                                break;
-                            case "*":
-                                break;
-                            case "e":
-                                Console.WriteLine($"Game over! ({row + 1}, {col})");
-                                Environment.Exit(0);
-                                break;
-                        }
-                        row++;
-                    }
-                    else
+                    if (!fieldIsAvailable(row + 1, col, size))
                     {
                         break;
                     }
+                    switch (matrix[row + 1, col])
+                    {
+                        case "c":
+                            matrix[row + 1, col] = "*";
+                            break;
+                        case "s":
+                            break;
+                        case "*":
+                            break;
+                        case "e":
+                            Console.WriteLine($"Game over! ({row + 1}, {col})");
+                            Environment.Exit(0);
+                            break;
+                    }
+                    row++;
                     break;
             }
-            int[] endPositions = new int[2];
-            endPositions[0] = row;
-            endPositions[1] = col;
-
-            return endPositions;
+            return new int[2] { row, col };
         }
 
-            static bool fieldIsAvailable(int row, int col, int size)
+        static bool fieldIsAvailable(int row, int col, int size)
         {
             return row >= 0 && col >= 0 && row < size && col < size; 
         }
-        static int FindStartRow(int size, string[,] matrix)
+        static int[] FindStart(int size, string[,] matrix)
         {
-            int startRow = 0;
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
                     if (matrix[i,j] == "s")
                     {
-                        startRow = i;
+                        return new int[2] { i, j };
                     }
                 }
             }
-            return startRow;
+            return null;
         }
-        static int FindStartCol(int size, string[,] matrix)
+        static bool HasCoal(string[,]  matrix, int size)
         {
-            int startCol = 0;
-
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
-                    if (matrix[i, j] == "s")
+                    if (matrix[i, j] == "c")
                     {
-                        startCol = j;
+                        return true;
                     }
                 }
             }
-            return startCol;
+            return false;
         }
-
     }
 }
