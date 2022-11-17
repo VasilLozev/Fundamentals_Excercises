@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 
 namespace _1._Count_Same_Values_in_Array
 {
@@ -9,7 +11,9 @@ namespace _1._Count_Same_Values_in_Array
     {
         static void Main(string[] args)
         {
-            
+
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+
             double[] numbers = Console.ReadLine()
                              .Split(" ")
                              .Select(double.Parse)
