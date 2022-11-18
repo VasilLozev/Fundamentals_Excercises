@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -11,31 +11,33 @@ namespace _4__Product_Shop
     {
         static void Main(string[] args)
         {
-            Dictionary<string, Dictionary<string,double>> FoodShops =
+            Dictionary<string, Dictionary<string,double>> shops =
                     new Dictionary<string, Dictionary<string, double>>();
 
-            while (true)
+                string command = Console.ReadLine();
+
+            while (command != "Revision")
             {
-                string[] input = Console.ReadLine().Split(", ");
+                string[] input = command.Split(", ");
+                string shop = input[0];
+                string product = input[1];
+                double price = double.Parse(input[2]);
 
-                if (input[0] == "Revision")
+                if (!shops.ContainsKey(shop))
                 {
-                    break;
+                    shops.Add(shop, new Dictionary<string,
+                 double>());
                 }
 
-                if (!FoodShops.ContainsKey(input[0]))
-                {
-                    FoodShops.Add(input[0], new Dictionary<string, double>());
-                }
-                FoodShops[input[0]].Add(input[1], double.Parse(input[2]));
-                FoodShops = FoodShops.OrderBy(x=>x.Key)
-                    .ToDictionary(x => x.Key, x => x.Value);
+                shops[shop].Add(product, price);
 
+                command = Console.ReadLine();
             }
-            foreach (var item in FoodShops)
+            shops = shops.OrderBy(x => x.Key).ToDictionary(x=> x.Key, x=>x.Value);
+            foreach (var shop in shops)
             {
-                Console.WriteLine($"{item.Key}->");
-                foreach (var product in item.Value)
+                Console.WriteLine($"{shop.Key}->");
+                foreach (var product in shop.Value)
                 {
                     Console.WriteLine($"Product: {product.Key}, Price: {product.Value}");
                 }
