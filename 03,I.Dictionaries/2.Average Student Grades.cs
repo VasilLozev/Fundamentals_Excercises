@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,22 +8,35 @@ namespace _2._Average_Student_Grades
     {
         static void Main(string[] args)
         {
-            int x = int.Parse(Console.ReadLine());
-            Dictionary<string, List<double>> studentRecord = new Dictionary<string, List<double>>();
-            for (int i = 0; i < x; i++)
+            Dictionary<string, List<decimal>> studentGrades = new
+              Dictionary<string, List<decimal>>();
+
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
             {
-                string[] nameGrade = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-                if (!studentRecord.ContainsKey(nameGrade[0]))
+                string[] input = Console.ReadLine().Split();
+
+                string name = input[0];
+                decimal grade = decimal.Parse(input[1]);
+                if (!studentGrades.ContainsKey(name))
                 {
-                    studentRecord.Add(nameGrade[0], new List<double>());
+                    studentGrades.Add(name, new List<decimal>());
                 }
-                studentRecord[nameGrade[0]].Add(double.Parse(nameGrade[1]));
+                studentGrades[name].Add(grade);
             }
-            foreach (var item in studentRecord)
+            foreach (KeyValuePair<string,List<decimal>> item in
+                studentGrades)
             {
-                Console.WriteLine($"{item.Key} -> {string.Join(" ", item.Value.ToArray().Select(n => Math.Round(n, 2).ToString("N2")))} (avg: {Math.Round(item.Value.Average(), 2).ToString("N2")})");
+                Console.Write($"{item.Key} -> ");
+
+                foreach (decimal grade in item.Value)
+                {
+                    Console.Write($"{grade:f2} ");
+                }
+
+                Console.WriteLine($"(avg: {item.Value.Average():f2})");
             }
         }
     }
 }
- 
