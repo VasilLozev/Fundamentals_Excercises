@@ -14,7 +14,11 @@ namespace _06._Record_Unique_Names
             {
                 names.Add(Console.ReadLine());
             }
-            Console.WriteLine(string.Join('\n', names));
+
+            foreach (var name in names)
+            {
+                Console.WriteLine(name);
+            }
         }
     }
 }
