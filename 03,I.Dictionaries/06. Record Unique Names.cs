@@ -12,9 +12,7 @@ namespace _06._Record_Unique_Names
             HashSet<string> names = new HashSet<string>();
             for (int i = 0; i < n; i++)
             {
-                string name = Console.ReadLine();
-                names.Add(name);
-                
+                names.Add(Console.ReadLine());
             }
             Console.WriteLine(string.Join('\n', names));
         }
