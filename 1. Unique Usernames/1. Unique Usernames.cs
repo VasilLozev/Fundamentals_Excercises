@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace 03,I.Dictionaries_Excercises
+namespace Exercises: Sets and Dictionaries Advanced
 {
     internal class Program
     {
