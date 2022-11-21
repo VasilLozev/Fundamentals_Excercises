@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _1._Unique_Usernames
+namespace 03,I.Dictionaries_Excercises
 {
     internal class Program
     {
