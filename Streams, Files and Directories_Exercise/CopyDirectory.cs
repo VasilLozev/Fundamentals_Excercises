@@ -1,19 +1,38 @@
-﻿namespace CopyDirectory
+namespace CopyDirectory
 {
     using System;
+    using System.IO;
+    using System.IO.Enumeration;
+    using System.Net.Http.Headers;
+
     public class CopyDirectory
     {
         static void Main()
         {
-            string inputPath =  @$"{Console.ReadLine()}";
-            string outputPath = @$"{Console.ReadLine()}";
+            string inputPath =  Console.ReadLine();
+            string outputPath = Console.ReadLine();
 
             CopyAllFiles(inputPath, outputPath);
         }
 
         public static void CopyAllFiles(string inputPath, string outputPath)
         {
-            file
+            if (Directory.Exists(outputPath))
+            {
+                Directory.Delete(outputPath);
+            }
+
+            Directory.CreateDirectory(outputPath);
+
+            string[] files = Directory.GetFiles(inputPath);
+            foreach (var file in files)
+            {
+                string fileName = Path.GetFileName(file);
+
+                string destination = Path.Combine(outputPath, fileName);
+
+                File.Copy(file, destination);
+            }
         }
     }
 }
