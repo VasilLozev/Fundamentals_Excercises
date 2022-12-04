@@ -4,3 +4,4 @@
 [03. CSharp-Advanced-Sets-and-Dictionaries-Advanced-Lab.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10031060/03.CSharp-Advanced-Sets-and-Dictionaries-Advanced-Lab.docx)
 [04. CSharp-Advanced-Streams-Files-and-Directories-Exercise.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10111418/04.CSharp-Advanced-Streams-Files-and-Directories-Exercise.docx)
 [04. CSharp-Advanced-Streams-Files-and-Directories-Lab.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10111446/04.CSharp-Advanced-Streams-Files-and-Directories-Lab.docx)
+[05. CSharp-Advanced-Functional-Programming-Exercises.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10148910/05.CSharp-Advanced-Functional-Programming-Exercises.docx)
