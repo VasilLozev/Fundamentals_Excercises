@@ -8,3 +8,4 @@
 [06. CSharp-Advanced-Defining-Classes-Lab.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10164926/06.CSharp-Advanced-Defining-Classes-Lab.docx)
 [06. CSharp-Advanced-Defining-Classes-Exercises.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10168124/06.CSharp-Advanced-Defining-Classes-Exercises.docx)
 [07. CSharp-Advanced-Workshop-Lab.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10197105/07.CSharp-Advanced-Workshop-Lab.docx)
+[06. CSharp-Advanced-Defining-Classes-Exercises.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10197142/06.CSharp-Advanced-Defining-Classes-Exercises.docx)
