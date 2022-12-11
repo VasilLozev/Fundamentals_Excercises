@@ -10,3 +10,4 @@
 [07. CSharp-Advanced-Workshop-Lab.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10197105/07.CSharp-Advanced-Workshop-Lab.docx)
 [06. CSharp-Advanced-Defining-Classes-Exercises.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10197142/06.CSharp-Advanced-Defining-Classes-Exercises.docx)[08. CSharp-Advanced-Generics-Lab.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10202435/08.CSharp-Advanced-Generics-Lab.docx)
 
+[Exercise Generics.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10202840/Exercise.Generics.docx)
