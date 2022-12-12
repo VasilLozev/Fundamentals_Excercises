@@ -11,3 +11,4 @@
 [06. CSharp-Advanced-Defining-Classes-Exercises.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10197142/06.CSharp-Advanced-Defining-Classes-Exercises.docx)[08. CSharp-Advanced-Generics-Lab.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10202435/08.CSharp-Advanced-Generics-Lab.docx)
 
 [Exercise Generics.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10202840/Exercise.Generics.docx)
+[Exam_Prep_Problem_Descriptions.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10208474/Exam_Prep_Problem_Descriptions.docx)
