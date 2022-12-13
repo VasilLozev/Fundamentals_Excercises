@@ -13,3 +13,4 @@
 [Exercise Generics.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10202840/Exercise.Generics.docx)
 [Exam_Prep_Problem_Descriptions.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10208474/Exam_Prep_Problem_Descriptions.docx)
 [Exam_Prep2_Problem_Description.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10210114/Exam_Prep2_Problem_Description.docx)
+[02. Rally Racing_Problem_Description.docx](https://github.com/VasilLozev/Fundamentals_Excercises/files/10221820/02.Rally.Racing_Problem_Description.docx)
